@@ -123,7 +123,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-CSRF_TRUSTED_ORIGINS = ['django-server-production-e85d.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['http://django-server-production-e85d.up.railway.app']
 
 
 # Static files (CSS, JavaScript, Images)
