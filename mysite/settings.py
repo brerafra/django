@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_auth',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -123,8 +124,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-CSRF_TRUSTED_ORIGINS = ['http://django-server-production-e85d.up.railway.app']
+CORS_ALLOWED_ORIGINS = [
+    'https://django-server-production-e85d.up.railway.app',
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://django-server-production-e85d.up.railway.app',
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
