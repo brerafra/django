@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container" id="main">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Ultimo ingreso</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for u in users %}
+            <tr>
+                <th scope="row">{{u.id}}</th>
+                <td>{{u.username}}</td>
+                <td>{{u.last_login}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</section>
+{% endblock %}

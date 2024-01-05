@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'boostrap/bootstrap.css' %}">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-side">
+            <div class="my-form__wrapper">
+                <div class="login-welcome-row">
+                    <h1>Registrar: &#x1F44F;</h1>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    
+                    <button type="submit" class="my-form__button">Registrarme</button>
+                </form>
+                <div class="my-form__actions">
+                    <div class="my-form__signup">
+                        <a href="{% url 'login' %}" title="Login">
+                            Ya tienes una cuenta?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-side">
+            <img src="{% static 'asset/mock_test.jpg' %}" alt="Mock" class="mockup">
+            <div class="welcome-message">
+                <h1>Navitron Maps!</h1>
+                <p>Your ultimate guide to navigating to the world and discovering new places with ease</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'boostrap/bootstrap.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
